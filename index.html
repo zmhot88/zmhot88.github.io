@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <title>我的首页</title>
-  <meta charset="utf-8">
-  </head>
-  <body>
-    Hello, Programmer!
-    <p>我并不想用这份文档来说明各式的知识点，只是一个陈述自己观点的平台，只是作为一个普通程序员来描述日常所见的种种。</p>
-    <p/>
-    <p>下面是我博客列表</p>
-    <ol>
-      <li><a href="design_pattern/design_pattern1.html">设计模式1</a></li>
-    </ol>
-  </body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
