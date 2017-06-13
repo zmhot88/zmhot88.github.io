@@ -1,0 +1,24 @@
+git flow 问题整理
+
+1. 提示：
+fatal: Not a gitflow-enabled repo yet. Please run "git flow init" first.
+删除工作目录下的.git/config 文件中 [gitflow *]模块，checkout develop和master分支，重新init repo 就可以了
+看来，只要本地有develop和master分支就可以了，不需要删除再重新init了。
+
+2. 创建feature分支时，提示：
+10:19:53.500: [MiguSDK] git -c core.quotepath=false flow feature start -F COMM-1007 develop
+fatal: Cannot update paths and switch to branch 'feature/COMM-1007' at the same time.
+Did you intend to checkout 'COMM-1007' which can not be resolved as commit?
+Could not create feature branch 'feature/COMM-1007'
+解决方法：
+用命令行的方式, 默认参数删掉吧
+git -c core.quotepath=false flow feature publish COMM-1007
+可以了，照样publish
+
+git flow 备忘录:
+https://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
+看起来不错。
+
+github上可以查到所有的参数：
+https://github.com/nvie/gitflow/wiki/Command-Line-Arguments
+

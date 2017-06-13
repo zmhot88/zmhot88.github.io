@@ -1,0 +1,9 @@
+gradle 初探
+
+Gradle: gradle.org
+gradlew: gradle wrapper
+plugin: android https://google.github.io/android-gradle-dsl/current/index.html
+android studio gradle guide: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Introduction
+jcenter() : https://bintray.com
+中文Guide: https://dongchuan.gitbooks.io/gradle-user-guide-/content/standard_gradle_plugins/software_development_plugins.html
+gradle目录：C:\Users\Ross\.gradle\wrapper\dists\gradle-3.3-all\55gk2rcmfc6p2dg9u9ohc3hw9\gradle-3.3\bin
